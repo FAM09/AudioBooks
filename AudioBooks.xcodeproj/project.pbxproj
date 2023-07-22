@@ -152,12 +152,7 @@
 		351702932A698257001E2F5D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				351702952A698311001E2F5D /* Splash4.swift */,
-				351702972A699258001E2F5D /* WelcomeScreen.swift */,
-				351702992A699B20001E2F5D /* Splash1.swift */,
-				3517029B2A69A06F001E2F5D /* Splash3.swift */,
-				35EC86452A6ABCEA0029A2AF /* Login.swift */,
-				35EC86472A6AE0E20029A2AF /* Register.swift */,
+				352EA9332A6B887900D98A2F /* Login Page */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +162,19 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		352EA9332A6B887900D98A2F /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				351702952A698311001E2F5D /* Splash4.swift */,
+				351702972A699258001E2F5D /* WelcomeScreen.swift */,
+				351702992A699B20001E2F5D /* Splash1.swift */,
+				3517029B2A69A06F001E2F5D /* Splash3.swift */,
+				35EC86452A6ABCEA0029A2AF /* Login.swift */,
+				35EC86472A6AE0E20029A2AF /* Register.swift */,
+			);
+			path = "Login Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
