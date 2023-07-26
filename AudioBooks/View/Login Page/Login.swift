@@ -10,6 +10,7 @@ import SwiftUI
 struct Login: View {
     @State private var emailAddress: String = ""
     @State private var password: String = ""
+    @State private var isSecure: Bool = true
     
     var body: some View {
         NavigationView {
@@ -80,18 +81,33 @@ struct Login: View {
                     
                     HStack(alignment: .center, spacing: 8) {
                         HStack {
-                            SecureField("Password", text: $password)
-                                .font(
-                                Font.custom("Inter", size: 14)
-                                .weight(.medium)
-                                )
-                                .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                            if isSecure {
+                                SecureField("Password", text: $password)
+                                    .textContentType(.oneTimeCode)
+                                    .font(
+                                    Font.custom("Inter", size: 14)
+                                    .weight(.medium)
+                                    )
+                                    .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                            } else {
+                                TextField("Password", text: $password)
+                                    .font(
+                                    Font.custom("Inter", size: 14)
+                                    .weight(.medium)
+                                    )
+                                    .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                            }
                         }
                         
                         HStack {
-                            Image("eye")
-                            .frame(width: 24, height: 24)
+                            Button(action: {
+                                isSecure.toggle()
+                            }) {
+                                Image("eye")
+                                .frame(width: 24, height: 24)
+                            }
                         }
                     }
                     .padding(12)

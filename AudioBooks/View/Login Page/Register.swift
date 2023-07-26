@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct Register: View {
     @State private var name: String = ""
@@ -13,6 +14,11 @@ struct Register: View {
     @State private var confirmPassword: String = ""
     @State private var password: String = ""
     @State private var isSecure: Bool = true
+    @State private var isMatch: Bool = true
+    @State private var isRegistrationSuccessful: Bool = false
+    @State private var destination: RegistrationStatus? = nil
+    @State private var showSuccessPopup = false
+    @State private var showFailurePopup = false
     
     var body: some View {
         NavigationView {
@@ -30,11 +36,11 @@ struct Register: View {
                         
                         VStack {
                             Text("Register")
-                              .font(
-                                Font.custom("Inter", size: 32)
-                                  .weight(.semibold)
-                              )
-                              .foregroundColor(.black)
+                                .font(
+                                    Font.custom("Inter", size: 32)
+                                        .weight(.semibold)
+                                )
+                                .foregroundColor(.black)
                         }
                         .padding(.top, 174)
                         .padding(.bottom, 602)
@@ -44,12 +50,12 @@ struct Register: View {
                         
                         VStack {
                             Text("Complete this field to create an account")
-                              .font(Font.custom("Inter", size: 14))
-                              .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                              .padding(.top, 218)
-                              .padding(.bottom, 574)
-                              .padding(.leading, 24)
-                              .padding(.trailing, 86)
+                                .font(Font.custom("Inter", size: 14))
+                                .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                                .padding(.top, 218)
+                                .padding(.bottom, 574)
+                                .padding(.leading, 24)
+                                .padding(.trailing, 86)
                         }
                         
                     }
@@ -57,14 +63,14 @@ struct Register: View {
                     Group {
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Your name")
-                              .font(Font.custom("Inter", size: 12))
-                              .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                              .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
-                
+                                .font(Font.custom("Inter", size: 12))
+                                .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                                .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
+                            
                             TextField("Name", text: $name)
                                 .font(
-                                Font.custom("Inter", size: 14)
-                                .weight(.medium)
+                                    Font.custom("Inter", size: 14)
+                                        .weight(.medium)
                                 )
                                 .foregroundColor(Color(red: 0.08, green: 0.05, blue: 0.05))
                                 .frame(maxWidth: .infinity, minHeight: 16, maxHeight: 16, alignment: .topLeading)
@@ -75,9 +81,9 @@ struct Register: View {
                         .background(.white)
                         .cornerRadius(8)
                         .overlay(
-                          RoundedRectangle(cornerRadius: 8)
-                            .inset(by: 0.5)
-                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 8)
+                                .inset(by: 0.5)
+                                .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                         )
                         .padding(.top, 256)
                         .padding(.bottom, 508)
@@ -85,14 +91,14 @@ struct Register: View {
                         
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Email address")
-                              .font(Font.custom("Inter", size: 12))
-                              .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                              .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
-                
+                                .font(Font.custom("Inter", size: 12))
+                                .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                                .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
+                            
                             TextField("Email address", text: $emailAddress)
                                 .font(
-                                Font.custom("Inter", size: 14)
-                                .weight(.medium)
+                                    Font.custom("Inter", size: 14)
+                                        .weight(.medium)
                                 )
                                 .foregroundColor(Color(red: 0.08, green: 0.05, blue: 0.05))
                                 .frame(maxWidth: .infinity, minHeight: 16, maxHeight: 16, alignment: .topLeading)
@@ -103,9 +109,9 @@ struct Register: View {
                         .background(.white)
                         .cornerRadius(8)
                         .overlay(
-                          RoundedRectangle(cornerRadius: 8)
-                            .inset(by: 0.5)
-                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 8)
+                                .inset(by: 0.5)
+                                .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                         )
                         .padding(.top, 324)
                         .padding(.bottom, 440)
@@ -115,23 +121,23 @@ struct Register: View {
                             HStack {
                                 VStack (alignment: .leading, spacing: 2){
                                     Text("Password")
-                                      .font(Font.custom("Inter", size: 12))
-                                      .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                                      .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
+                                        .font(Font.custom("Inter", size: 12))
+                                        .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                                        .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
                                     if isSecure {
                                         SecureField("Password", text: $password)
                                             .textContentType(.oneTimeCode)
                                             .font(
-                                            Font.custom("Inter", size: 14)
-                                            .weight(.medium)
+                                                Font.custom("Inter", size: 14)
+                                                    .weight(.medium)
                                             )
                                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                     } else {
                                         TextField("Password", text: $password)
                                             .font(
-                                            Font.custom("Inter", size: 14)
-                                            .weight(.medium)
+                                                Font.custom("Inter", size: 14)
+                                                    .weight(.medium)
                                             )
                                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -146,7 +152,7 @@ struct Register: View {
                                     isSecure.toggle()
                                 }) {
                                     Image("eye")
-                                    .frame(width: 24, height: 24)
+                                        .frame(width: 24, height: 24)
                                 }
                             }
                         }
@@ -155,9 +161,9 @@ struct Register: View {
                         .background(.white)
                         .cornerRadius(8)
                         .overlay(
-                          RoundedRectangle(cornerRadius: 8)
-                            .inset(by: 0.5)
-                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 8)
+                                .inset(by: 0.5)
+                                .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                         )
                         .padding(.top, 392)
                         .padding(.bottom, 372)
@@ -167,27 +173,41 @@ struct Register: View {
                             HStack {
                                 VStack (alignment: .leading, spacing: 2){
                                     Text("Confirm password")
-                                      .font(Font.custom("Inter", size: 12))
-                                      .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                                      .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
+                                        .font(Font.custom("Inter", size: 12))
+                                        .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                                        .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
                                     
                                     if isSecure {
                                         SecureField("Confirm password", text: $confirmPassword)
                                             .textContentType(.oneTimeCode)
                                             .font(
-                                            Font.custom("Inter", size: 14)
-                                            .weight(.medium)
+                                                Font.custom("Inter", size: 14)
+                                                    .weight(.medium)
                                             )
                                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                            .onSubmit {
+                                                if password != confirmPassword {
+                                                    isMatch = false
+                                                } else {
+                                                    isMatch = true
+                                                }
+                                            }
                                     } else {
                                         TextField("Confirm Password", text: $confirmPassword)
                                             .font(
-                                            Font.custom("Inter", size: 14)
-                                            .weight(.medium)
+                                                Font.custom("Inter", size: 14)
+                                                    .weight(.medium)
                                             )
                                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                            .onSubmit {
+                                                if password != confirmPassword {
+                                                    isMatch = false
+                                                } else {
+                                                    isMatch = true
+                                                }
+                                            }
                                     }
                                 }
                             }
@@ -197,7 +217,7 @@ struct Register: View {
                                     isSecure.toggle()
                                 }) {
                                     Image("eye")
-                                    .frame(width: 24, height: 24)
+                                        .frame(width: 24, height: 24)
                                 }
                             }
                         }
@@ -206,41 +226,44 @@ struct Register: View {
                         .background(.white)
                         .cornerRadius(8)
                         .overlay(
-                          RoundedRectangle(cornerRadius: 8)
-                            .inset(by: 0.5)
-                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 8)
+                                .inset(by: 0.5)
+                                .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                         )
                         .padding(.top, 460)
                         .padding(.bottom, 304)
                         .padding(.vertical, 24)
                         
-                        HStack(alignment: .center, spacing: 10) {
-                           Text("Login")
-                              .font(Font.custom("Inter", size: 16))
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.white)
-                              .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                              .padding(.horizontal, 16)
-                              .padding(.vertical, 12)
+                        if isMatch != true {
+                            Text("Password not match")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color.red)
+                                .padding(.top, 500)
+                                .padding(.bottom, 280)
+                                .padding(.leading, 24)
+                                .padding(.trailing, 226.0)
                         }
-                        .frame(width: 327, height: 48, alignment: .center)
-                        .background(Color(red: 0.38, green: 0.15, blue: 0.71))
-                        .cornerRadius(24)
-                        .shadow(color: Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.15), radius: 2, x: 0, y: 4)
-                        .padding(.top, 536)
-                        .padding(.bottom, 228)
-                        .padding(.vertical, 24)
                     }
                     
                     Group {
                         HStack(alignment: .center, spacing: 10) {
-                           Text("Register")
-                              .font(Font.custom("Inter", size: 16))
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.white)
-                              .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                              .padding(.horizontal, 16)
-                              .padding(.vertical, 12)
+                            Button("Register") {
+                                isRegistrationSuccessful = addUser(n: name, e: emailAddress, p: password)
+                                
+                                if isRegistrationSuccessful {
+                                    showSuccessPopup = true
+                                } else {
+                                    showFailurePopup = true
+                                }
+                            }
+                            .font(Font.custom("Inter", size: 16))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 12)
+                            
                         }
                         .frame(width: 327, height: 48, alignment: .center)
                         .background(Color(red: 0.38, green: 0.15, blue: 0.71))
@@ -249,14 +272,23 @@ struct Register: View {
                         .padding(.top, 536)
                         .padding(.bottom, 228)
                         .padding(.vertical, 24)
+                        .background(
+                            NavigationLink(
+                                destination: Login(),
+                                tag: .success,
+                                selection: $destination,
+                                label: { EmptyView() }
+                            )
+                            .hidden()
+                        )
                         
                         Text("or register with")
-                          .font(Font.custom("Inter", size: 14))
-                          .foregroundColor(.black)
-                          .padding(.top, 622)
-                          .padding(.bottom, 170)
-                          .padding(.leading, 137)
-                          .padding(.trailing, 137)
+                            .font(Font.custom("Inter", size: 14))
+                            .foregroundColor(.black)
+                            .padding(.top, 622)
+                            .padding(.bottom, 170)
+                            .padding(.leading, 137)
+                            .padding(.trailing, 137)
                         
                         HStack(alignment: .center, spacing: 28) {
                             HStack(alignment: .center, spacing: 10) {
@@ -288,15 +320,15 @@ struct Register: View {
                         HStack(alignment: .top, spacing: 4) {
                             HStack {
                                 Text("Already have an account?")
-                                  .font(Font.custom("Inter", size: 12))
-                                  .foregroundColor(.black)
+                                    .font(Font.custom("Inter", size: 12))
+                                    .foregroundColor(.black)
                             }
                             
                             HStack {
                                 NavigationLink (destination: Login()) {
                                     Text("Login here")
-                                      .font(Font.custom("Inter", size: 12))
-                                      .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
+                                        .font(Font.custom("Inter", size: 12))
+                                        .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
                                 }
                             }
                         }
@@ -304,6 +336,27 @@ struct Register: View {
                         .padding(.bottom, 66)
                         .padding(.leading, 82)
                         .padding(.trailing, 83)
+                        
+                        if showSuccessPopup {
+                            StatusPopup(img: "checkmark.circle", txt: "Registrasi Success", clr: .green)
+                                .transition(.scale)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                        showSuccessPopup = false
+                                        destination = .success
+                                    }
+                                }
+                        }
+                        
+                        if showFailurePopup {
+                            StatusPopup(img: "exclamationmark.circle", txt: "Registrasi Gagal", clr: .red)
+                                .transition(.scale)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                        showFailurePopup = false
+                                    }
+                                }
+                        }
                     }
                 }
                 .frame(width: 375, height: 812)
