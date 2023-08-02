@@ -22,7 +22,7 @@ struct Splash1: View {
                 
                 HStack(alignment: .center, spacing: 2.2) {
                     Image("logo")
-                    .padding(5.5)
+                        .padding(5.5)
                 }
                 .padding(.top, 70)
                 .padding(.bottom, 698)
@@ -34,9 +34,9 @@ struct Splash1: View {
     We provide a wide variety of books from around the world, so you can read them anywhere and anytime. Everything at your fingertips
     """
                     )
-                      .font(Font.custom("Inter", size: 14))
-                      .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .font(Font.custom("Inter", size: 14))
+                    .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 }
                 .padding(0)
                 .frame(width: 326, height: 80, alignment: .center)
@@ -45,48 +45,16 @@ struct Splash1: View {
                 .padding(.leading, 24)
                 .padding(.trailing, 25)
                 
-                HStack(alignment: .center, spacing: 10) {
-                    NavigationLink (destination: Splash4()) {
-                        Text("Continue")
-                          .font(Font.custom("Inter", size: 16))
-                          .multilineTextAlignment(.center)
-                          .foregroundColor(.white)
-                          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                          .padding(.horizontal, 16)
-                          .padding(.vertical, 12)
-                    }
+                NavigationLink(destination: Splash4()) {
+                    ButtonBlock(txt: "Continue")
                 }
-                .frame(width: 327, height: 48, alignment: .center)
-                .background(Color(red: 0.38, green: 0.15, blue: 0.71))
-                .cornerRadius(24)
-                .shadow(color: Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.15), radius: 2, x: 0, y: 4)
                 .padding(.top, 618)
                 .padding(.bottom, 146)
                 .padding(.horizontal, 24)
                 
-                HStack(alignment: .center, spacing: 10) {
-                    NavigationLink (destination: Login()) {
-                        Text("Login")
-                          .font(
-                            Font.custom("Inter", size: 16)
-                              .weight(.medium)
-                          )
-                          .multilineTextAlignment(.center)
-                          .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
-                          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                          .padding(.horizontal, 16)
-                          .padding(.vertical, 12)
-                        
-                    }
+                NavigationLink(destination: Login()) {
+                    ButtonBorder()
                 }
-                .frame(width: 327, height: 48, alignment: .center)
-                .cornerRadius(24)
-                .shadow(color: Color(red: 0.7, green: 0.7, blue: 0.7).opacity(0.15), radius: 2, x: 0, y: 4)
-                .overlay(
-                  RoundedRectangle(cornerRadius: 24)
-                    .inset(by: 0.5)
-                    .stroke(Color(red: 0.38, green: 0.15, blue: 0.71), lineWidth: 1)
-                )
                 .padding(.top, 686)
                 .padding(.bottom, 78)
                 .padding(.horizontal, 24)

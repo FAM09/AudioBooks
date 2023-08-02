@@ -12,18 +12,18 @@ struct Splash3: View {
         NavigationView {
             ZStack {
                 Rectangle()
-                  .foregroundColor(.clear)
-                  .frame(width: 375, height: 828)
-                  .background(
-                    LinearGradient(
-                      stops: [
-                        Gradient.Stop(color: .black, location: 0.00),
-                        Gradient.Stop(color: Color(red: 0.04, green: 0.04, blue: 0.04).opacity(0), location: 1.00),
-                      ],
-                      startPoint: UnitPoint(x: 0.5, y: -0.34),
-                      endPoint: UnitPoint(x: 0.5, y: 1)
+                    .foregroundColor(.clear)
+                    .frame(width: 375, height: 828)
+                    .background(
+                        LinearGradient(
+                            stops: [
+                                Gradient.Stop(color: .black, location: 0.00),
+                                Gradient.Stop(color: Color(red: 0.04, green: 0.04, blue: 0.04).opacity(0), location: 1.00),
+                            ],
+                            startPoint: UnitPoint(x: 0.5, y: -0.34),
+                            endPoint: UnitPoint(x: 0.5, y: 1)
+                        )
                     )
-                  )
                 
                 HStack(alignment: .top, spacing: 5.40741) {
                     Image("logo-3")
@@ -36,34 +36,14 @@ struct Splash3: View {
                 .padding(.bottom, 552)
                 .padding(.horizontal, 59.1)
                 
-                HStack(alignment: .top, spacing: 48) {
-                    HStack {
-                        VStack {
-                            Image("Brands 2")
-                        }
-                        .padding(.trailing, 48)
-                        
-                        VStack {
-                            Text("Continue with Apple")
-                              .font(
-                                Font.custom("Inter", size: 16)
-                                  .weight(.medium)
-                              )
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.white)
-                        }
-                    }
-                    .padding(.leading, 16)
-                    .padding(.trailing, 88)
-                    .padding(.vertical, 12)
+                NavigationLink(destination: Login()){
+                    ButtonContinueWith(logo: "Brands 2", txt: "Continue with Apple", clr: Color(red: 0.08, green: 0.05, blue: 0.05))
                 }
-                .frame(width: 332, height: 48, alignment: .topLeading)
-                .background(Color(red: 0.08, green: 0.05, blue: 0.05))
-                .cornerRadius(24)
                 .padding(.top, 408)
                 .padding(.bottom, 356)
                 .padding(.leading, 21)
                 .padding(.trailing, 22)
+                
                 
                 HStack(alignment: .center, spacing: 47) {
                     HStack {
@@ -74,13 +54,13 @@ struct Splash3: View {
                         
                         VStack {
                             Text("Continue with Google")
-                              .font(
-                                Font.custom("Inter", size: 16)
-                                  .weight(.medium)
-                              )
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.white)
-                              .frame(width: 166, alignment: .top)
+                                .font(
+                                    Font.custom("Inter", size: 16)
+                                        .weight(.medium)
+                                )
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 166, alignment: .top)
                         }
                     }
                     .padding(.leading, 16)
@@ -97,9 +77,9 @@ struct Splash3: View {
                 
                 HStack(alignment: .top, spacing: 33) {
                     Image("Brands")
-                    .frame(width: 24, height: 24)
-                    .padding(.leading, 16)
-                    .padding(.vertical, 12)
+                        .frame(width: 24, height: 24)
+                        .padding(.leading, 16)
+                        .padding(.vertical, 12)
                     
                     Text("Continue with Facebook")
                         .font(
@@ -123,12 +103,12 @@ struct Splash3: View {
                     HStack {
                         NavigationLink (destination: Login()) {
                             Text("Skip")
-                              .font(
-                                Font.custom("Inter", size: 16)
-                                  .weight(.medium)
-                              )
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.white)
+                                .font(
+                                    Font.custom("Inter", size: 16)
+                                        .weight(.medium)
+                                )
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
                         }
                     }
                     .padding(.horizontal, 16)
@@ -155,11 +135,11 @@ struct Splash3: View {
             }
             .frame(width: 375, height: 828)
             .background(
-              Image("Splash 3")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 375, height: 828)
-                .clipped()
+                Image("Splash 3")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 375, height: 828)
+                    .clipped()
             )
             .background(.white)
             .cornerRadius(16)

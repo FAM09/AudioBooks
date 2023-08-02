@@ -28,11 +28,11 @@ struct Login: View {
                     
                     HStack {
                         Text("Login")
-                          .font(
-                            Font.custom("Inter", size: 32)
-                              .weight(.semibold)
-                          )
-                          .foregroundColor(.black)
+                            .font(
+                                Font.custom("Inter", size: 32)
+                                    .weight(.semibold)
+                            )
+                            .foregroundColor(.black)
                     }
                     .padding(.top, 284)
                     .padding(.bottom, 492)
@@ -41,8 +41,8 @@ struct Login: View {
                     
                     HStack {
                         Text("Enter your email address and password here. ")
-                          .font(Font.custom("Inter", size: 14))
-                          .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                            .font(Font.custom("Inter", size: 14))
+                            .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                     }
                     .padding(.top, 328)
                     .padding(.bottom, 464)
@@ -52,28 +52,28 @@ struct Login: View {
                     VStack(alignment: .leading, spacing: 2) {
                         // Body 2 - reguler
                         Text("Email address")
-                          .font(Font.custom("Inter", size: 12))
-                          .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                          .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
-            
+                            .font(Font.custom("Inter", size: 12))
+                            .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                            .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .leading)
+                        
                         TextField("Email address", text: $emailAddress)
                             .font(
-                            Font.custom("Inter", size: 14)
-                            .weight(.medium)
+                                Font.custom("Inter", size: 14)
+                                    .weight(.medium)
                             )
                             .foregroundColor(Color(red: 0.08, green: 0.05, blue: 0.05))
                             .frame(maxWidth: .infinity, minHeight: 16, maxHeight: 16, alignment: .topLeading)
-
-                            
+                        
+                        
                     }
                     .padding(12)
                     .frame(width: 327, height: 48, alignment: .leading)
                     .background(.white)
                     .cornerRadius(8)
                     .overlay(
-                      RoundedRectangle(cornerRadius: 8)
-                        .inset(by: 0.5)
-                        .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                        RoundedRectangle(cornerRadius: 8)
+                            .inset(by: 0.5)
+                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                     )
                     .padding(.top, 368)
                     .padding(.bottom, 396)
@@ -85,16 +85,16 @@ struct Login: View {
                                 SecureField("Password", text: $password)
                                     .textContentType(.oneTimeCode)
                                     .font(
-                                    Font.custom("Inter", size: 14)
-                                    .weight(.medium)
+                                        Font.custom("Inter", size: 14)
+                                            .weight(.medium)
                                     )
                                     .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                             } else {
                                 TextField("Password", text: $password)
                                     .font(
-                                    Font.custom("Inter", size: 14)
-                                    .weight(.medium)
+                                        Font.custom("Inter", size: 14)
+                                            .weight(.medium)
                                     )
                                     .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
                                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -106,7 +106,7 @@ struct Login: View {
                                 isSecure.toggle()
                             }) {
                                 Image("eye")
-                                .frame(width: 24, height: 24)
+                                    .frame(width: 24, height: 24)
                             }
                         }
                     }
@@ -115,9 +115,9 @@ struct Login: View {
                     .background(.white)
                     .cornerRadius(8)
                     .overlay(
-                      RoundedRectangle(cornerRadius: 8)
-                        .inset(by: 0.5)
-                        .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
+                        RoundedRectangle(cornerRadius: 8)
+                            .inset(by: 0.5)
+                            .stroke(Color(red: 0.08, green: 0.05, blue: 0.05), lineWidth: 1)
                     )
                     .padding(.top, 434)
                     .padding(.bottom, 330)
@@ -125,11 +125,11 @@ struct Login: View {
                     
                     HStack(alignment: .center, spacing: 10) {
                         Text("Forgot password?")
-                          .font(
-                            Font.custom("Inter", size: 14)
-                              .weight(.medium)
-                          )
-                          .foregroundColor(.black)
+                            .font(
+                                Font.custom("Inter", size: 14)
+                                    .weight(.medium)
+                            )
+                            .foregroundColor(.black)
                     }
                     .padding(.top, 506)
                     .padding(.bottom, 286)
@@ -137,13 +137,13 @@ struct Login: View {
                     .padding(.trailing, 24)
                     
                     HStack(alignment: .center, spacing: 10) {
-                       Text("Login")
-                          .font(Font.custom("Inter", size: 16))
-                          .multilineTextAlignment(.center)
-                          .foregroundColor(.white)
-                          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                          .padding(.horizontal, 16)
-                          .padding(.vertical, 12)
+                        Text("Login")
+                            .font(Font.custom("Inter", size: 16))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 12)
                     }
                     .frame(width: 327, height: 48, alignment: .center)
                     .background(Color(red: 0.38, green: 0.15, blue: 0.71))
@@ -154,12 +154,12 @@ struct Login: View {
                     .padding(.vertical, 24)
                     
                     Text("or Login with")
-                      .font(Font.custom("Inter", size: 14))
-                      .foregroundColor(.black)
-                      .padding(.top, 620)
-                      .padding(.bottom, 172)
-                      .padding(.leading, 145)
-                      .padding(.trailing, 144)
+                        .font(Font.custom("Inter", size: 14))
+                        .foregroundColor(.black)
+                        .padding(.top, 620)
+                        .padding(.bottom, 172)
+                        .padding(.leading, 145)
+                        .padding(.trailing, 144)
                     
                     HStack(alignment: .center, spacing: 28) {
                         HStack(alignment: .center, spacing: 10) {
@@ -191,15 +191,15 @@ struct Login: View {
                     HStack(alignment: .top, spacing: 4) {
                         HStack {
                             Text("Didn’t have account?")
-                              .font(Font.custom("Inter", size: 12))
-                              .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 12))
+                                .foregroundColor(.black)
                         }
                         
                         HStack {
                             NavigationLink (destination: Register()) {
                                 Text("Register here")
-                                  .font(Font.custom("Inter", size: 12))
-                                  .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
+                                    .font(Font.custom("Inter", size: 12))
+                                    .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
                             }
                         }
                     }
