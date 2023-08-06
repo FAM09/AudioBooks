@@ -11,35 +11,27 @@ struct Splash4: View {
     var body: some View {
         NavigationView {
             ZStack {
-                ZStack {
-                    Image("bro")
-                        .padding(.top, 148)
-                        .padding(.bottom, 350)
-                        .padding(.leading, 24.5)
-                        .padding(.trailing, 25)
-                }
-                .frame(width: 325.47293, height: 313.88303)
+                Image("bro")
+                    .padding(.top, 148)
+                    .padding(.bottom, 350)
+                    .padding(.leading, 24.5)
+                    .padding(.trailing, 25)
+                    .frame(width: 325.47293, height: 313.88303)
                 
-                HStack (alignment: .center, spacing: 2.2) {
-                    Image("logo")
-                        .padding(.top, 70.0)
-                        .padding(.bottom, 698)
-                        .padding(.leading, 19)
-                        .padding(.trailing, 229)
-                }
-                .padding(5.5)
+                Image("logo")
+                    .padding(.top, 70.0)
+                    .padding(.bottom, 698)
+                    .padding(.leading, 19)
+                    .padding(.trailing, 229)
                 
-                HStack(alignment: .bottom, spacing: 10) {
-                    Text("Are you busy with your activities and would like to read a book? Your favorite books will still be available to you thanks to the audiobook feature")
-                        .font(Font.custom("Inter", size: 14))
-                        .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                }
-                .frame(width: 326, height: 80, alignment: .bottomTrailing)
-                .padding(.top, 494)
-                .padding(.bottom, 238)
-                .padding(.leading, 24)
-                .padding(.trailing, 25)
+                Text("Are you busy with your activities and would like to read a book? Your favorite books will still be available to you thanks to the audiobook feature")
+                    .font(Font.custom("Inter", size: 14))
+                    .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                    .frame(width: 326, height: 80, alignment: .bottomTrailing)
+                    .padding(.top, 494)
+                    .padding(.bottom, 238)
+                    .padding(.leading, 24)
+                    .padding(.trailing, 25)
                 
                 NavigationLink(destination: Splash3()) {
                     ButtonBlock(txt: "Continue")
