@@ -9,6 +9,38 @@ import Foundation
 import UIKit
 import SwiftUI
 
+var Items: [bookItem] = [
+    bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
+    bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
+    bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
+    bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
+    bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6")
+]
+
+struct bookItem: Identifiable {
+    let id = UUID()
+    let img: String
+    let title: String
+    let auth: String
+    let rating: String
+}
+
+var Categories: [CategoryBook] = [
+    CategoryBook(img: "novel", txt: "Novel"),
+    CategoryBook(img: "science", txt: "Science"),
+    CategoryBook(img: "comics", txt: "Comic"),
+    CategoryBook(img: "story", txt: "Old Story"),
+    CategoryBook(img: "health", txt: "Health"),
+    CategoryBook(img: "psychology", txt: "Psychology"),
+    CategoryBook(img: "biography", txt: "Biography")
+]
+
+struct CategoryBook: Identifiable {
+    let id = UUID()
+    let img: String
+    let txt: String
+}
+
 var users: [User] = []
 
 struct User: Equatable {
