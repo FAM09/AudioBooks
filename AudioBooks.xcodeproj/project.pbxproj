@@ -24,6 +24,12 @@
 		353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */; };
 		354211512A8242D0008BD02E /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354211502A8242D0008BD02E /* searchBar.swift */; };
 		354211552A8244DC008BD02E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354211542A8244DC008BD02E /* HomeView.swift */; };
+		35AD3BB92A86682500E1E60C /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BB82A86682500E1E60C /* TopBar.swift */; };
+		35AD3BBB2A86694100E1E60C /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBA2A86694100E1E60C /* StatisticView.swift */; };
+		35AD3BBD2A866CF800E1E60C /* CardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBC2A866CF800E1E60C /* CardInformation.swift */; };
+		35AD3BBF2A8678CF00E1E60C /* CardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */; };
+		35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC02A867CFD00E1E60C /* AudioBook.swift */; };
+		35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */; };
 		35CCFF862A82879100645901 /* EllipseProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CCFF852A82879100645901 /* EllipseProgressBar.swift */; };
 		35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98542A81F46F0038B7A8 /* LatestRead.swift */; };
 		35CD98572A8209010038B7A8 /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98562A8209010038B7A8 /* tabBar.swift */; };
@@ -78,6 +84,12 @@
 		353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPopup.swift; sourceTree = "<group>"; };
 		354211502A8242D0008BD02E /* searchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
 		354211542A8244DC008BD02E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		35AD3BB82A86682500E1E60C /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		35AD3BBA2A86694100E1E60C /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		35AD3BBC2A866CF800E1E60C /* CardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformation.swift; sourceTree = "<group>"; };
+		35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSmall.swift; sourceTree = "<group>"; };
+		35AD3BC02A867CFD00E1E60C /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
+		35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCard.swift; sourceTree = "<group>"; };
 		35CCFF852A82879100645901 /* EllipseProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipseProgressBar.swift; sourceTree = "<group>"; };
 		35CD98542A81F46F0038B7A8 /* LatestRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRead.swift; sourceTree = "<group>"; };
 		35CD98562A8209010038B7A8 /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
@@ -235,6 +247,12 @@
 				354211502A8242D0008BD02E /* searchBar.swift */,
 				354211542A8244DC008BD02E /* HomeView.swift */,
 				35CCFF852A82879100645901 /* EllipseProgressBar.swift */,
+				35AD3BB82A86682500E1E60C /* TopBar.swift */,
+				35AD3BBA2A86694100E1E60C /* StatisticView.swift */,
+				35AD3BBC2A866CF800E1E60C /* CardInformation.swift */,
+				35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */,
+				35AD3BC02A867CFD00E1E60C /* AudioBook.swift */,
+				35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -378,12 +396,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CD98592A820BFD0038B7A8 /* categoriesItem.swift in Sources */,
+				35AD3BB92A86682500E1E60C /* TopBar.swift in Sources */,
 				3504D3FE2A7A65D000C9EF44 /* ButtonContinueWith.swift in Sources */,
 				352EA9362A6BAEE300D98A2F /* UserData.xcdatamodeld in Sources */,
 				35CCFF862A82879100645901 /* EllipseProgressBar.swift in Sources */,
+				35AD3BBF2A8678CF00E1E60C /* CardSmall.swift in Sources */,
 				354211552A8244DC008BD02E /* HomeView.swift in Sources */,
 				35EC86462A6ABCEA0029A2AF /* Login.swift in Sources */,
 				35CD985D2A8217680038B7A8 /* item.swift in Sources */,
+				35AD3BBD2A866CF800E1E60C /* CardInformation.swift in Sources */,
 				354211512A8242D0008BD02E /* searchBar.swift in Sources */,
 				35E468C12A74E2EB00CD54DE /* ButtonBlock.swift in Sources */,
 				35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */,
@@ -397,10 +418,13 @@
 				3517026B2A698019001E2F5D /* ContentView.swift in Sources */,
 				351702982A699258001E2F5D /* WelcomeScreen.swift in Sources */,
 				3517029A2A699B21001E2F5D /* Splash1.swift in Sources */,
+				35AD3BBB2A86694100E1E60C /* StatisticView.swift in Sources */,
 				35FE9B752A7E36650002DD41 /* InputPasswordField.swift in Sources */,
 				35EC86482A6AE0E20029A2AF /* Register.swift in Sources */,
 				352EA9382A6BC3C200D98A2F /* User.swift in Sources */,
+				35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */,
 				353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */,
+				35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */,
 				351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */,
 				35CD98572A8209010038B7A8 /* tabBar.swift in Sources */,
 			);
