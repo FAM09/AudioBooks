@@ -10,6 +10,7 @@ import SwiftUI
 struct Home: View {
     @State private var search: String = ""
     @State var selectedTab = 0
+    @State private var isShowingListeningView = false
     
     var body: some View {
         ZStack {
@@ -18,7 +19,7 @@ struct Home: View {
                 if selectedTab == 0 {
                     TopBarHome(variable: $search)
                 } else {
-                    TopBar(txt: "My Bookmark")
+                    TopBar(txt: getTitle(tag: selectedTab)!)
                 }
                 
                 TabView (selection: $selectedTab){

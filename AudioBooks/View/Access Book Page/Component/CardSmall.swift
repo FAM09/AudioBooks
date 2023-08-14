@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardSmall: View {
+    @State private var isView = false
+    
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             HStack(alignment: .center, spacing: 14) {
@@ -67,7 +69,13 @@ struct CardSmall: View {
                 HStack(alignment: .center, spacing: 8) {
                     HStack(alignment: .center, spacing: 0) {
                         Image("play-circle")
-                        .frame(width: 32, height: 32)
+                            .onTapGesture {
+                                isView.toggle()
+                            }
+                            .sheet(isPresented: $isView) {
+                                ListeningView()
+                            }
+                            .frame(width: 32, height: 32)
                     }
                     .padding(.leading, 6)
                     .padding(.trailing, 4)

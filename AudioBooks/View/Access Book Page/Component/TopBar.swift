@@ -19,6 +19,7 @@ struct TopBar: View {
                 .font(Font.custom("Inter", size: 18))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(red: 0.04, green: 0.04, blue: 0.04))
+                .frame(width: 111, height: 18.0)
             
             HStack(alignment: .center, spacing: 10) {
                 Rectangle()
@@ -46,6 +47,6 @@ struct TopBar: View {
 
 struct TopBar_Previews: PreviewProvider {
     static var previews: some View {
-        TopBar(txt: "Statistic")
+        TopBar(txt: "My Bookmark")
     }
 }

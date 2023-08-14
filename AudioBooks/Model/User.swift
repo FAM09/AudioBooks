@@ -9,16 +9,6 @@ import Foundation
 import UIKit
 import SwiftUI
 
-var accessView: TabBar = .statistic
-
-
-enum TabBar {
-    case home
-    case bookmark
-    case audiobook
-    case statistic
-}
-
 var Items: [bookItem] = [
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
@@ -85,26 +75,4 @@ func checkConfirmPassword(password: String, confirmPassword: String) -> Bool {
     } else {
         return false
     }
-}
-
-func activateScrollView() -> Bool {
-    var isActive: Bool = false
-    
-    NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
-        guard notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] is CGRect else {
-            return
-        }
-        isActive = true
-        
-        // Lakukan penyesuaian tampilan saat keyboard muncul
-        // Misalnya, menggeser tampilan ke atas sejauh tinggi keyboard
-        // Anda juga dapat menganimasikannya untuk efek yang lebih halus
-        // dengan menggunakan .animation modifier
-    }
-    
-    NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { notification in
-        isActive = false
-    }
-    
-    return isActive
 }

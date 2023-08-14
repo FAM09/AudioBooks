@@ -33,9 +33,9 @@
 		35AD3BBF2A8678CF00E1E60C /* CardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */; };
 		35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC02A867CFD00E1E60C /* AudioBook.swift */; };
 		35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */; };
+		35CCED772A8A9707004B4EF9 /* ListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CCED762A8A9707004B4EF9 /* ListeningView.swift */; };
 		35CCFF862A82879100645901 /* EllipseProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CCFF852A82879100645901 /* EllipseProgressBar.swift */; };
 		35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98542A81F46F0038B7A8 /* LatestRead.swift */; };
-		35CD98572A8209010038B7A8 /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98562A8209010038B7A8 /* tabBar.swift */; };
 		35CD98592A820BFD0038B7A8 /* categoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98582A820BFD0038B7A8 /* categoriesItem.swift */; };
 		35CD985B2A82141F0038B7A8 /* titleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD985A2A82141F0038B7A8 /* titleContainer.swift */; };
 		35CD985D2A8217680038B7A8 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD985C2A8217680038B7A8 /* item.swift */; };
@@ -97,9 +97,9 @@
 		35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSmall.swift; sourceTree = "<group>"; };
 		35AD3BC02A867CFD00E1E60C /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCard.swift; sourceTree = "<group>"; };
+		35CCED762A8A9707004B4EF9 /* ListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningView.swift; sourceTree = "<group>"; };
 		35CCFF852A82879100645901 /* EllipseProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipseProgressBar.swift; sourceTree = "<group>"; };
 		35CD98542A81F46F0038B7A8 /* LatestRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRead.swift; sourceTree = "<group>"; };
-		35CD98562A8209010038B7A8 /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
 		35CD98582A820BFD0038B7A8 /* categoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesItem.swift; sourceTree = "<group>"; };
 		35CD985A2A82141F0038B7A8 /* titleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleContainer.swift; sourceTree = "<group>"; };
 		35CD985C2A8217680038B7A8 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
@@ -208,10 +208,9 @@
 		351702932A698257001E2F5D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				35FE9B762A7E5E020002DD41 /* Access Book Page */,
 				3517026A2A698019001E2F5D /* ContentView.swift */,
 				35E468BA2A74D8F100CD54DE /* testComponent.swift */,
-				35FE9B712A7E267C0002DD41 /* Component */,
+				35FE9B762A7E5E020002DD41 /* Access Book Page */,
 				352EA9332A6B887900D98A2F /* Login Page */,
 			);
 			path = View;
@@ -229,6 +228,7 @@
 		352EA9332A6B887900D98A2F /* Login Page */ = {
 			isa = PBXGroup;
 			children = (
+				35FE9B712A7E267C0002DD41 /* Component */,
 				351702972A699258001E2F5D /* WelcomeScreen.swift */,
 				351702952A698311001E2F5D /* Splash4.swift */,
 				351702992A699B20001E2F5D /* Splash1.swift */,
@@ -239,17 +239,10 @@
 			path = "Login Page";
 			sourceTree = "<group>";
 		};
-		35FE9B712A7E267C0002DD41 /* Component */ = {
+		35CCED752A8A9524004B4EF9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */,
-				35E468BE2A74DEDE00CD54DE /* ButtonBorder.swift */,
-				35E468C02A74E2EB00CD54DE /* ButtonBlock.swift */,
-				3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */,
-				35FE9B722A7E2F420002DD41 /* InputTextField.swift */,
-				35FE9B742A7E36650002DD41 /* InputPasswordField.swift */,
 				35CD98542A81F46F0038B7A8 /* LatestRead.swift */,
-				35CD98562A8209010038B7A8 /* tabBar.swift */,
 				35CD98582A820BFD0038B7A8 /* categoriesItem.swift */,
 				35CD985A2A82141F0038B7A8 /* titleContainer.swift */,
 				35CD985C2A8217680038B7A8 /* item.swift */,
@@ -269,10 +262,25 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		35FE9B712A7E267C0002DD41 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				35FE9B742A7E36650002DD41 /* InputPasswordField.swift */,
+				353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */,
+				35E468BE2A74DEDE00CD54DE /* ButtonBorder.swift */,
+				35E468C02A74E2EB00CD54DE /* ButtonBlock.swift */,
+				3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */,
+				35FE9B722A7E2F420002DD41 /* InputTextField.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		35FE9B762A7E5E020002DD41 /* Access Book Page */ = {
 			isa = PBXGroup;
 			children = (
+				35CCED752A8A9524004B4EF9 /* Component */,
 				35FE9B772A7E5E910002DD41 /* Home.swift */,
+				35CCED762A8A9707004B4EF9 /* ListeningView.swift */,
 			);
 			path = "Access Book Page";
 			sourceTree = "<group>";
@@ -409,6 +417,7 @@
 			files = (
 				35F1EF952A8A829500F5CF45 /* TopBarHome.swift in Sources */,
 				35CD98592A820BFD0038B7A8 /* categoriesItem.swift in Sources */,
+				35CCED772A8A9707004B4EF9 /* ListeningView.swift in Sources */,
 				35AD3BB92A86682500E1E60C /* TopBar.swift in Sources */,
 				350CBE402A889BBA003C7CD8 /* Partial_TabBar.swift in Sources */,
 				3504D3FE2A7A65D000C9EF44 /* ButtonContinueWith.swift in Sources */,
@@ -442,7 +451,6 @@
 				35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */,
 				352D2E0F2A873D88007ACE40 /* BookmarkView.swift in Sources */,
 				351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */,
-				35CD98572A8209010038B7A8 /* tabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
