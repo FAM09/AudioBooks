@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3504D3FE2A7A65D000C9EF44 /* ButtonContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */; };
+		350CBE402A889BBA003C7CD8 /* Partial_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350CBE3F2A889BBA003C7CD8 /* Partial_TabBar.swift */; };
 		351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702682A698019001E2F5D /* AudioBooksApp.swift */; };
 		3517026B2A698019001E2F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517026A2A698019001E2F5D /* ContentView.swift */; };
 		3517026D2A69801C001E2F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3517026C2A69801C001E2F5D /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 		351702982A699258001E2F5D /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702972A699258001E2F5D /* WelcomeScreen.swift */; };
 		3517029A2A699B21001E2F5D /* Splash1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702992A699B20001E2F5D /* Splash1.swift */; };
 		3517029C2A69A06F001E2F5D /* Splash3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517029B2A69A06F001E2F5D /* Splash3.swift */; };
+		352D2E0F2A873D88007ACE40 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352D2E0E2A873D88007ACE40 /* BookmarkView.swift */; };
+		352D2E112A874EA7007ACE40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352D2E102A874EA7007ACE40 /* File.swift */; };
 		352EA9362A6BAEE300D98A2F /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352EA9342A6BAEE300D98A2F /* UserData.xcdatamodeld */; };
 		352EA9382A6BC3C200D98A2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EA9372A6BC3C100D98A2F /* User.swift */; };
 		353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */; };
@@ -41,6 +44,7 @@
 		35E468C12A74E2EB00CD54DE /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E468C02A74E2EB00CD54DE /* ButtonBlock.swift */; };
 		35EC86462A6ABCEA0029A2AF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC86452A6ABCEA0029A2AF /* Login.swift */; };
 		35EC86482A6AE0E20029A2AF /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC86472A6AE0E20029A2AF /* Register.swift */; };
+		35F1EF952A8A829500F5CF45 /* TopBarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1EF942A8A829500F5CF45 /* TopBarHome.swift */; };
 		35FE9B732A7E2F420002DD41 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B722A7E2F420002DD41 /* InputTextField.swift */; };
 		35FE9B752A7E36650002DD41 /* InputPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B742A7E36650002DD41 /* InputPasswordField.swift */; };
 		35FE9B782A7E5E910002DD41 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B772A7E5E910002DD41 /* Home.swift */; };
@@ -65,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContinueWith.swift; sourceTree = "<group>"; };
+		350CBE3F2A889BBA003C7CD8 /* Partial_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partial_TabBar.swift; sourceTree = "<group>"; };
 		351702652A698019001E2F5D /* AudioBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		351702682A698019001E2F5D /* AudioBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksApp.swift; sourceTree = "<group>"; };
 		3517026A2A698019001E2F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +84,8 @@
 		351702972A699258001E2F5D /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		351702992A699B20001E2F5D /* Splash1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash1.swift; sourceTree = "<group>"; };
 		3517029B2A69A06F001E2F5D /* Splash3.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Splash3.swift; sourceTree = "<group>"; tabWidth = 4; };
+		352D2E0E2A873D88007ACE40 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		352D2E102A874EA7007ACE40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		352EA9352A6BAEE300D98A2F /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		352EA9372A6BC3C100D98A2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPopup.swift; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 		35E468C02A74E2EB00CD54DE /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
 		35EC86452A6ABCEA0029A2AF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		35EC86472A6AE0E20029A2AF /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		35F1EF942A8A829500F5CF45 /* TopBarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarHome.swift; sourceTree = "<group>"; };
 		35FE9B722A7E2F420002DD41 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		35FE9B742A7E36650002DD41 /* InputPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordField.swift; sourceTree = "<group>"; };
 		35FE9B772A7E5E910002DD41 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				351702682A698019001E2F5D /* AudioBooksApp.swift */,
+				352D2E102A874EA7007ACE40 /* File.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +262,9 @@
 				35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */,
 				35AD3BC02A867CFD00E1E60C /* AudioBook.swift */,
 				35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */,
+				352D2E0E2A873D88007ACE40 /* BookmarkView.swift */,
+				350CBE3F2A889BBA003C7CD8 /* Partial_TabBar.swift */,
+				35F1EF942A8A829500F5CF45 /* TopBarHome.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -395,8 +407,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F1EF952A8A829500F5CF45 /* TopBarHome.swift in Sources */,
 				35CD98592A820BFD0038B7A8 /* categoriesItem.swift in Sources */,
 				35AD3BB92A86682500E1E60C /* TopBar.swift in Sources */,
+				350CBE402A889BBA003C7CD8 /* Partial_TabBar.swift in Sources */,
 				3504D3FE2A7A65D000C9EF44 /* ButtonContinueWith.swift in Sources */,
 				352EA9362A6BAEE300D98A2F /* UserData.xcdatamodeld in Sources */,
 				35CCFF862A82879100645901 /* EllipseProgressBar.swift in Sources */,
@@ -406,6 +420,7 @@
 				35CD985D2A8217680038B7A8 /* item.swift in Sources */,
 				35AD3BBD2A866CF800E1E60C /* CardInformation.swift in Sources */,
 				354211512A8242D0008BD02E /* searchBar.swift in Sources */,
+				352D2E112A874EA7007ACE40 /* File.swift in Sources */,
 				35E468C12A74E2EB00CD54DE /* ButtonBlock.swift in Sources */,
 				35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */,
 				35CD985B2A82141F0038B7A8 /* titleContainer.swift in Sources */,
@@ -425,6 +440,7 @@
 				35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */,
 				353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */,
 				35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */,
+				352D2E0F2A873D88007ACE40 /* BookmarkView.swift in Sources */,
 				351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */,
 				35CD98572A8209010038B7A8 /* tabBar.swift in Sources */,
 			);

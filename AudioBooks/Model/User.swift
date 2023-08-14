@@ -9,6 +9,16 @@ import Foundation
 import UIKit
 import SwiftUI
 
+var accessView: TabBar = .statistic
+
+
+enum TabBar {
+    case home
+    case bookmark
+    case audiobook
+    case statistic
+}
+
 var Items: [bookItem] = [
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),

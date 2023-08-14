@@ -9,80 +9,49 @@ import SwiftUI
 
 struct Home: View {
     @State private var search: String = ""
+    @State var selectedTab = 0
     
     var body: some View {
         ZStack {
-            VStack {
-                VStack {
+            VStack(spacing: 0.0) {
+                
+                if selectedTab == 0 {
+                    TopBarHome(variable: $search)
+                } else {
                     TopBar(txt: "My Bookmark")
-                    
-                    ScrollView {
-                        VStack(alignment: .leading) {
-                            Text("Dave Grohl: Tales Of Life And Music")
-                                .font(
-                                    Font.custom("Inter", size: 18)
-                                        .weight(.bold)
-                                )
-                                .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                                .multilineTextAlignment(.leading)
-                                .padding(.bottom, 8)
-                            
-                            Text("E. H. Gombrich")
-                                .font(
-                                    Font.custom("Inter", size: 12)
-                                        .weight(.medium)
-                                )
-                                .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                                .padding(.bottom, 12)
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(alignment: .center, spacing: 24) {
-                                    ForEach(Items) {_ in
-                                        BookmarkCard()
-                                    }
-                                }
-                                .padding(4)
-                            }
-                            
-                            Text("Dave Grohl: Tales Of Life And Music")
-                                .font(
-                                    Font.custom("Inter", size: 18)
-                                        .weight(.bold)
-                                )
-                                .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                                .multilineTextAlignment(.leading)
-                                .padding(.bottom, 8)
-                            
-                            Text("E. H. Gombrich")
-                                .font(
-                                    Font.custom("Inter", size: 12)
-                                        .weight(.medium)
-                                )
-                                .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                                .padding(.bottom, 12)
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(alignment: .center, spacing: 24) {
-                                    ForEach(Items) {_ in
-                                        BookmarkCard()
-                                    }
-                                }
-                                .padding(4)
-                            }
-                        }
-                    }
-                    .frame(width: 328, height: 565)
-                    .fixedSize()
                 }
                 
-                
-                
-                tabBar()
+                TabView (selection: $selectedTab){
+                    HomeView()
+                        .tabItem {
+                            Partial_TabBar(img: Image(systemName: "house"), txt: "Home")
+                        }
+                        .tag(0)
+                    
+                    BookmarkView()
+                        .tabItem {
+                            Partial_TabBar(img: Image(systemName: "bookmark"), txt: "Bookmark")
+                        }
+                        .tag(1)
+                    
+                    AudioBook()
+                        .tabItem {
+                            Partial_TabBar(img: Image(systemName: "headphones"), txt: "AudioBook")
+                        }
+                        .tag(2)
+                    
+                    StatisticView()
+                        .tabItem {
+                            Partial_TabBar(img: Image(systemName: "chart.bar.xaxis"), txt: "Statistic")
+                        }
+                        .tag(3)
+                }
+                .accentColor(.blue)
             }
+            .frame(width: 375, height: 812)
+            .background(.white)
+            .cornerRadius(16)
         }
-        .frame(width: 375, height: 812)
-        .background(.white)
-        .cornerRadius(16)
     }
 }
 

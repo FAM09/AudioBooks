@@ -41,7 +41,6 @@ struct TopBar: View {
         }
         .frame(width: 375, height: 48)
         .padding(.top, 44)
-        .padding(.bottom, 32)
     }
 }
 
