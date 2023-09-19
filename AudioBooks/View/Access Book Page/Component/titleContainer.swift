@@ -15,22 +15,20 @@ struct titleContainer: View {
         VStack(alignment: .leading, spacing: 8) {
             VStack(alignment: .leading, spacing: 8) {
                 Text(title)
-                  .font(
-                    Font.custom("Inter", size: 16)
-                      .weight(.medium)
-                  )
-                  .foregroundColor(Color(red: 0.08, green: 0.05, blue: 0.05))
-                  .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .font(
+                        Font.custom("Inter", size: 16)
+                            .weight(.medium)
+                    )
+                    .foregroundColor(Color(red: 0.08, green: 0.05, blue: 0.05))
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
                 
                 Text(subTitle)
-                  .font(Font.custom("Inter", size: 12))
-                  .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                  .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(Font.custom("Inter", size: 12))
+                    .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(0)
             .frame(width: 326, alignment: .leading)
         }
-        .padding(0)
         .frame(width: 327, alignment: .leading)
     }
 }

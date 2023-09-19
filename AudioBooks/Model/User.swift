@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import SwiftUI
 
+var isPresentForgotPassword: Bool = false
+
 var Items: [bookItem] = [
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),
     bookItem(img: "book1", title: "The Tales Of Beedle The Bard", auth: "J.K Rowling", rating: "5.6"),

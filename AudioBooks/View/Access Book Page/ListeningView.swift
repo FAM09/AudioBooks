@@ -10,15 +10,14 @@ import SwiftUI
 struct ListeningView: View {
     var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: 0.0) {
                 VStack(alignment: .center, spacing: 12) {
                     Image("book preview")
-                      .resizable()
-                      .aspectRatio(contentMode: .fill)
-                      .frame(width: 327, height: 363)
-                      .clipped()
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 327, height: 363)
+                        .clipped()
                 }
-                .padding(.horizontal, 8)
                 .padding(.top, 16)
                 .padding(.bottom, 8)
                 .frame(width: 327, height: 363, alignment: .center)
@@ -28,30 +27,28 @@ struct ListeningView: View {
                 HStack(alignment: .top, spacing: 36) {
                     HStack(alignment: .top, spacing: 12) {
                         Image("Left Actionable")
-                        .frame(width: 24, height: 24)
+                            .frame(width: 24, height: 24)
                         
                         VStack(alignment: .leading, spacing: 4) {
                             Text("Chapter 2 out of 20")
-                              .font(
-                                Font.custom("Inter", size: 12)
-                                  .weight(.bold)
-                              )
-                              .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
-                              .frame(maxWidth: .infinity, alignment: .topLeading)
+                                .font(
+                                    Font.custom("Inter", size: 12)
+                                        .weight(.bold)
+                                )
+                                .foregroundColor(Color(red: 0.46, green: 0.46, blue: 0.46))
+                                .frame(maxWidth: .infinity, alignment: .topLeading)
                             
                             Text("Music, passion and idealism")
-                              .font(Font.custom("Inter", size: 12))
-                              .foregroundColor(Color(red: 0.09, green: 0.08, blue: 0.07))
-                              .frame(maxWidth: .infinity, alignment: .topLeading)
+                                .font(Font.custom("Inter", size: 12))
+                                .foregroundColor(Color(red: 0.09, green: 0.08, blue: 0.07))
+                                .frame(maxWidth: .infinity, alignment: .topLeading)
                         }
-                        .padding(0)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .padding(0)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
                     
                     Image("bookmark")
-                    .frame(width: 24, height: 24)
+                        .frame(width: 24, height: 24)
                 }
                 .padding(.top, 26)
                 .frame(width: 327, alignment: .topLeading)
@@ -63,24 +60,22 @@ struct ListeningView: View {
                                 .frame(width: 327, height: 0)
                                 ._colorMonochrome(Color(red: 0.51, green: 0.22, blue: 0.84))
                         }
-                        .padding(0)
                         .frame(maxWidth: .infinity, minHeight: 20, maxHeight: 20, alignment: .center)
                         
                         HStack(alignment: .top, spacing: 47) {
                             Text("20.40")
-                              .font(Font.custom("Inter", size: 14))
-                              .foregroundColor(.black)
-                              .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(Font.custom("Inter", size: 14))
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             
                             Text("120.30")
-                              .font(Font.custom("Inter", size: 14))
-                              .multilineTextAlignment(.center)
-                              .foregroundColor(.black)
+                                .font(Font.custom("Inter", size: 14))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
                         }
                         .frame(maxWidth: .infinity, alignment: .top)
                         
                     }
-                    .padding(0)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
                     .frame(width: 327, height: 44)
                 }
@@ -92,24 +87,24 @@ struct ListeningView: View {
                         .frame(width: 24, height: 24)
                     
                     Text("-15s")
-                      .font(
-                        Font.custom("Inter", size: 24)
-                          .weight(.medium)
-                      )
-                      .multilineTextAlignment(.center)
-                      .foregroundColor(.black)
+                        .font(
+                            Font.custom("Inter", size: 24)
+                                .weight(.medium)
+                        )
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
                     
                     Image(systemName: "pause.circle")
                         .resizable()
                         .frame(width: 58, height: 58)
                     
                     Text("+15s")
-                      .font(
-                        Font.custom("Inter", size: 24)
-                          .weight(.medium)
-                      )
-                      .multilineTextAlignment(.center)
-                      .foregroundColor(.black)
+                        .font(
+                            Font.custom("Inter", size: 24)
+                                .weight(.medium)
+                        )
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.black)
                     
                     Image(systemName: "forward.end")
                         .resizable()

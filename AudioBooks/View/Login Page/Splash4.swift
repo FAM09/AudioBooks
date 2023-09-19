@@ -10,44 +10,37 @@ import SwiftUI
 struct Splash4: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                Image("bro")
-                    .padding(.top, 148)
-                    .padding(.bottom, 350)
-                    .padding(.leading, 24.5)
-                    .padding(.trailing, 25)
-                    .frame(width: 325.47293, height: 313.88303)
+            VStack(alignment: .center, spacing: 0.0) {
+                HStack {
+                    Image("logo")
+                    
+                    Spacer()
+                }
+                .padding(.top, 70)
+                .padding(.bottom, 39.92)
                 
-                Image("logo")
-                    .padding(.top, 70.0)
-                    .padding(.bottom, 698)
-                    .padding(.leading, 19)
-                    .padding(.trailing, 229)
+                Image("bro")
+                
+                Spacer()
                 
                 Text("Are you busy with your activities and would like to read a book? Your favorite books will still be available to you thanks to the audiobook feature")
-                    .font(Font.custom("Inter", size: 14))
+                    .font(Font.custom("Inter", size: 15))
                     .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                    .frame(width: 326, height: 80, alignment: .bottomTrailing)
-                    .padding(.top, 494)
-                    .padding(.bottom, 238)
-                    .padding(.leading, 24)
-                    .padding(.trailing, 25)
+                    .frame(height: 80, alignment: .center)
+                
+                Spacer()
                 
                 NavigationLink(destination: Splash3()) {
                     ButtonBlock(txt: "Continue")
                 }
-                .padding(.top, 618)
-                .padding(.bottom, 146)
-                .padding(.horizontal, 24)
+                .padding(.bottom, 20)
                 
                 NavigationLink(destination: Login()) {
                     ButtonBorder()
                 }
-                .padding(.top, 686)
                 .padding(.bottom, 78)
-                .padding(.horizontal, 24)
             }
-            .frame(width: 375, height: 812)
+            .frame(width: 327, height: 812)
             .background(.white)
             .cornerRadius(16)
         }

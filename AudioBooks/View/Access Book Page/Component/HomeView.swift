@@ -60,6 +60,7 @@ struct HomeView: View {
             }
             .padding(.top, 126)
         }
+        .padding(.bottom, 93)
         .frame(width: 375, height: 812)
         .fixedSize(horizontal: true, vertical: false)
      }

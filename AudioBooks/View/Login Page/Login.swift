@@ -6,120 +6,158 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Login: View {
+    @State private var emailReset: String = ""
     @State private var emailAddress: String = ""
     @State private var password: String = ""
     @State private var isSecure: Bool = true
+    @State private var isLoginSuccess: Bool? = nil
+    @State private var destination: RegistrationStatus? = nil
+    @State var showForgotPassword = false
     
     var body: some View {
         NavigationView {
             ScrollView {
                 ZStack {
-                    Image("logo-4")
-                        .frame(width: 256.85187, height: 73, alignment: .top)
-                        .padding(.top, 153)
-                        .padding(.bottom, 586)
-                        .padding(.leading, 59)
-                        .padding(.trailing, 59.15)
-                    
-                    Text("Login")
-                        .font(
-                            Font.custom("Inter", size: 32)
-                                .weight(.semibold)
-                        )
-                        .foregroundColor(.black)
-                        .padding(.top, 284)
-                        .padding(.bottom, 492)
-                        .padding(.leading, 22)
-                        .padding(.trailing, 267)
-                    
-                    Text("Enter your email address and password here. ")
-                        .font(Font.custom("Inter", size: 14))
-                        .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
-                        .padding(.top, 328)
-                        .padding(.bottom, 464)
+                    VStack(spacing: 0.0) {
+                        Image("logo-4")
+                            .padding(.bottom, 58)
+                            .padding(.top, 153)
+                        
+                        HStack {
+                            Text("Login")
+                                .font(
+                                    Font.custom("Inter", size: 32)
+                                        .weight(.semibold)
+                                )
+                                .foregroundColor(.black)
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, 8)
                         .padding(.leading, 24)
-                        .padding(.trailing, 68)
-                    
-                    InputTextField(variable: $emailAddress, label: "Email address", placeHolder: "Email address")
-                    .padding(.top, 368)
-                    .padding(.bottom, 396)
-                    .padding(.vertical, 24)
-                    
-                    InputPasswordField(variable: $password, placeHolder: "Password", label: "Password")
-                    .padding(.top, 434)
-                    .padding(.bottom, 330)
-                    .padding(.vertical, 24)
-                    
-                    Text("Forgot password?")
-                        .font(
-                            Font.custom("Inter", size: 14)
-                                .weight(.medium)
-                        )
-                        .foregroundColor(.black)
-                        .padding(.top, 506)
-                        .padding(.bottom, 286)
-                        .padding(.leading, 231)
+                        
+                        HStack {
+                            Text("Enter your email address and password here. ")
+                                .font(Font.custom("Inter", size: 14))
+                                .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.11))
+                            
+                            Spacer()
+                        }
+                        .padding(.bottom, 20)
+                        .padding(.leading, 24)
+                        
+                        InputTextField(variable: $emailAddress, label: "Email address", placeHolder: "Email address")
+                            .padding(.bottom, 18)
+                        
+                        InputPasswordField(variable: $password, placeHolder: "Password", label: "Password")
+                            .padding(.bottom, 24)
+                        
+                        HStack {
+                            Spacer()
+                            
+                            Text("Forgot password?")
+                                .onTapGesture {
+                                    showForgotPassword.toggle()
+                                    print(showForgotPassword)
+                                }
+                                .sheet(isPresented: $showForgotPassword){
+                                    
+                                    VStack {
+                                        InputTextField(variable: $emailReset, label: "Email address", placeHolder: "Email address")
+                                            .padding(.bottom, 18)
+                                        
+                                        ButtonBlock(txt: "Reset Password")
+                                            .onTapGesture {
+                                                Auth.auth().sendPasswordReset(withEmail: emailReset) { error in
+                                                    if error != nil {
+                                                        print(error!)
+                                                    } else {
+                                                        showForgotPassword.toggle()
+                                                    }
+                                                }
+                                                print(showForgotPassword)
+                                            }
+                                    }
+                                    
+                                }
+                                .font(
+                                    Font.custom("Inter", size: 14)
+                                        .weight(.medium)
+                                )
+                                .foregroundColor(.black)
+                        }
+                        .padding(.bottom, 16)
                         .padding(.trailing, 24)
-                    
-                    NavigationLink(destination: Splash1()) {
+                        
                         ButtonBlock(txt: "Login")
                             .onTapGesture {
-                                print("Login")
+                                Auth.auth().signIn(withEmail: emailAddress, password: password) { authResult, error in
+                                    if error != nil {
+                                        print(error!)
+                                        isLoginSuccess = false
+                                    } else {
+                                        isLoginSuccess = true
+                                    }
+                                }
+                            }
+                            .background(
+                                NavigationLink(
+                                    destination: Home(),
+                                    tag: .success,
+                                    selection: $destination,
+                                    label: { EmptyView() }
+                                )
+                                .hidden()
+                            )
+                        
+                        Text("or Login with")
+                            .font(Font.custom("Inter", size: 14))
+                            .foregroundColor(.black)
+                            .padding(.bottom, 30)
+                        
+                        LogoView()
+                            .padding(.bottom, 20)
+                        
+                        HStack(alignment: .top, spacing: 4) {
+                            Text("Didn’t have account?")
+                                .font(Font.custom("Inter", size: 12))
+                                .foregroundColor(.black)
+                            
+                            NavigationLink (destination: Register()) {
+                                Text("Register here")
+                                    .font(Font.custom("Inter", size: 12))
+                                    .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
+                            }
+                        }
+                        .padding(.bottom, 66)
+                    }
+                    .frame(width: 375, height: 812)
+                    .background(.white)
+                    .cornerRadius(16)
+                    
+                    
+                    if isLoginSuccess == true {
+                        StatusPopup(img: "checkmark.circle", txt: "Login Berhasil", clr: .green)
+                            .transition(.scale)
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    isLoginSuccess = nil
+                                    destination = .success
+                                }
+                            }
+                    } else if isLoginSuccess == false {
+                        StatusPopup(img: "exclamationmark.circle", txt: "Login Gagal", clr: .red)
+                            .transition(.scale)
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    isLoginSuccess = nil
+                                }
                             }
                     }
-                    .padding(.top, 542)
-                    .padding(.bottom, 222)
-                    .padding(.vertical, 24)
-                    
-                    Text("or Login with")
-                        .font(Font.custom("Inter", size: 14))
-                        .foregroundColor(.black)
-                        .padding(.top, 620)
-                        .padding(.bottom, 172)
-                        .padding(.leading, 145)
-                        .padding(.trailing, 144)
-                    
-                    HStack(alignment: .center, spacing: 28) {
-                        Image("Brands 3")
-                            .padding(8)
-                            .background(.white)
-                            .cornerRadius(12)
-                        
-                        Image("Brands 4")
-                            .padding(8)
-                            .background(.white)
-                            .cornerRadius(12)
-                        
-                        Image("Brands-2")
-                            .padding(8)
-                            .background(.white)
-                            .cornerRadius(12)
-                    }
-                    .padding(.top, 670)
-                    .padding(.bottom, 102)
-                    .padding(.leading, 100)
-                    .padding(.trailing, 99)
-                    
-                    HStack(alignment: .top, spacing: 4) {
-                        Text("Didn’t have account?")
-                            .font(Font.custom("Inter", size: 12))
-                            .foregroundColor(.black)
-                        
-                        NavigationLink (destination: Register()) {
-                            Text("Register here")
-                                .font(Font.custom("Inter", size: 12))
-                                .foregroundColor(Color(red: 0.38, green: 0.15, blue: 0.71))
-                        }
-                    }
-                    .padding(.top, 730)
-                    .padding(.bottom, 66)
-                    .padding(.vertical, 88)
                 }
-                .frame(width: 375, height: 812)
-                .background(.white)
-                .cornerRadius(16)
             }
             .fixedSize()
         }
@@ -132,3 +170,5 @@ struct Login_Previews: PreviewProvider {
         Login()
     }
 }
+
+

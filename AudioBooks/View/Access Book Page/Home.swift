@@ -53,6 +53,7 @@ struct Home: View {
             .background(.white)
             .cornerRadius(16)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

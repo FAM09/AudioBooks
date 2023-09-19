@@ -159,6 +159,7 @@ struct StatisticView: View {
             }
         }
         .padding(.top, 118)
+        .padding(.bottom, 93)
         .frame(width: 375, height: 812)
     }
 }

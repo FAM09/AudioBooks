@@ -24,62 +24,51 @@ struct Splash3: View {
                             endPoint: UnitPoint(x: 0.5, y: 1)
                         )
                     )
-                Image("logo-3")
-                    .frame(width: 256.85187, height: 73, alignment: .top)
-                    .padding(.top, 187)
-                    .padding(.bottom, 552)
-                    .padding(.horizontal, 59.1)
                 
-                NavigationLink(destination: Login()){
-                    ButtonContinueWith(spacing: 48, logo: "Brands 2", txt: "Continue with Apple", clr: Color(red: 0.08, green: 0.05, blue: 0.05))
+                VStack (alignment: .center, spacing: 0.0){
+                    Spacer()
+                    
+                    Image("logo-3")
+                        .frame(width: 256.85187, height: 73, alignment: .top)
+                        .padding(.bottom, 148)
+                    
+                    NavigationLink(destination: Login()){
+                        ButtonContinueWith(spacing: 48, logo: "Brands 2", txt: "Continue with Apple", clr: Color(red: 0.08, green: 0.05, blue: 0.05))
+                    }
+                    .padding(.bottom, 20)
+                    
+                    NavigationLink(destination: Login()){
+                        ButtonContinueWith(spacing: 43, logo: "Brands 1", txt: "Continue with Google", clr: Color(red: 1, green: 0.32, blue: 0.32))
+                    }
+                    .padding(.bottom, 20)
+                    
+                    NavigationLink(destination: Login()){
+                        ButtonContinueWith(spacing: 33, logo: "Brands", txt: "Continue with Facebook", clr: Color(red: 0, green: 0.47, blue: 1))
+                    }
+                    .padding(.bottom, 24)
+                    
+                    NavigationLink (destination: Login()) {
+                        Text("Skip")
+                            .font(
+                                Font.custom("Inter", size: 16)
+                                    .weight(.medium)
+                            )
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                    }
+                    .padding(.bottom, 50)
+                    
+                    HStack(alignment: .center, spacing: 10) {
+                        Text("By continuing you agree to T&Cs. We use your data to offer you a personalized experiences. Find out more.")
+                            .frame(width: 311, height: 32, alignment: .center)
+                            .padding(.all, 16)
+                            .font(Font.custom("Inter", size: 12))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .frame(width: 327, height: 52, alignment: .center)
+                    .padding(.bottom, 58)
                 }
-                .padding(.top, 408)
-                .padding(.bottom, 356)
-                .padding(.leading, 21)
-                .padding(.trailing, 22)
-                
-                NavigationLink(destination: Login()){
-                    ButtonContinueWith(spacing: 43, logo: "Brands 1", txt: "Continue with Google", clr: Color(red: 1, green: 0.32, blue: 0.32))
-                }
-                .padding(.top, 472)
-                .padding(.bottom, 292)
-                .padding(.leading, 21)
-                .padding(.trailing, 22)
-                
-                NavigationLink(destination: Login()){
-                    ButtonContinueWith(spacing: 33, logo: "Brands", txt: "Continue with Facebook", clr: Color(red: 0, green: 0.47, blue: 1))
-                }
-                .padding(.top, 540)
-                .padding(.bottom, 224)
-                .padding(.leading, 21)
-                .padding(.trailing, 22)
-                
-                NavigationLink (destination: Login()) {
-                    Text("Skip")
-                        .font(
-                            Font.custom("Inter", size: 16)
-                                .weight(.medium)
-                        )
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.white)
-                }
-                .padding(.top, 612)
-                .padding(.bottom, 160)
-                .padding(.leading, 155)
-                .padding(.trailing, 154)
-                
-                HStack(alignment: .center, spacing: 10) {
-                    Text("By continuing you agree to T&Cs. We use your data to offer you a personalized experiences. Find out more.")
-                        .frame(width: 311, height: 32, alignment: .center)
-                        .padding(.all, 16)
-                        .font(Font.custom("Inter", size: 12))
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(width: 327, height: 52, alignment: .center)
-                .padding(.top, 702)
-                .padding(.bottom, 58)
-                .padding(.horizontal, 24)
             }
             .frame(width: 375, height: 828)
             .background(

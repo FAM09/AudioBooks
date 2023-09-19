@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33343BAD0DEF8472A77C61FB /* Pods_AudioBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427FD66A0952367E12288730 /* Pods_AudioBooks.framework */; };
 		3504D3FE2A7A65D000C9EF44 /* ButtonContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */; };
 		350CBE402A889BBA003C7CD8 /* Partial_TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350CBE3F2A889BBA003C7CD8 /* Partial_TabBar.swift */; };
 		351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702682A698019001E2F5D /* AudioBooksApp.swift */; };
@@ -20,19 +21,28 @@
 		351702982A699258001E2F5D /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702972A699258001E2F5D /* WelcomeScreen.swift */; };
 		3517029A2A699B21001E2F5D /* Splash1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351702992A699B20001E2F5D /* Splash1.swift */; };
 		3517029C2A69A06F001E2F5D /* Splash3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517029B2A69A06F001E2F5D /* Splash3.swift */; };
+		351EA9F42AAC40CD000327AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 351EA9F32AAC40CD000327AE /* GoogleService-Info.plist */; };
+		351EA9F72AAC435E000327AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 351EA9F62AAC435E000327AE /* FirebaseAnalytics */; };
+		351EA9F92AAC435E000327AE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 351EA9F82AAC435E000327AE /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		351EA9FB2AAC435E000327AE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 351EA9FA2AAC435E000327AE /* FirebaseAuth */; };
+		351EA9FD2AAC435E000327AE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 351EA9FC2AAC435E000327AE /* FirebaseAuthCombine-Community */; };
 		352D2E0F2A873D88007ACE40 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352D2E0E2A873D88007ACE40 /* BookmarkView.swift */; };
-		352D2E112A874EA7007ACE40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352D2E102A874EA7007ACE40 /* File.swift */; };
 		352EA9362A6BAEE300D98A2F /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352EA9342A6BAEE300D98A2F /* UserData.xcdatamodeld */; };
 		352EA9382A6BC3C200D98A2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EA9372A6BC3C100D98A2F /* User.swift */; };
+		353040F82AAB727A0045E93E /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353040F72AAB727A0045E93E /* LogoView.swift */; };
 		353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */; };
 		354211512A8242D0008BD02E /* searchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354211502A8242D0008BD02E /* searchBar.swift */; };
 		354211552A8244DC008BD02E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354211542A8244DC008BD02E /* HomeView.swift */; };
+		35A941CC2AB43C3A00D0956E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A941CB2AB43C3A00D0956E /* ForgotPasswordView.swift */; };
 		35AD3BB92A86682500E1E60C /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BB82A86682500E1E60C /* TopBar.swift */; };
 		35AD3BBB2A86694100E1E60C /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBA2A86694100E1E60C /* StatisticView.swift */; };
 		35AD3BBD2A866CF800E1E60C /* CardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBC2A866CF800E1E60C /* CardInformation.swift */; };
 		35AD3BBF2A8678CF00E1E60C /* CardSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */; };
 		35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC02A867CFD00E1E60C /* AudioBook.swift */; };
 		35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */; };
+		35C35BA22AAC521500145F1B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C35BA12AAC521500145F1B /* File.swift */; };
+		35C35BA42AAC572D00145F1B /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C35BA32AAC572D00145F1B /* RegisterUser.swift */; };
+		35C35BA62AACC88000145F1B /* InputTextFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C35BA52AACC88000145F1B /* InputTextFieldError.swift */; };
 		35CCED772A8A9707004B4EF9 /* ListeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CCED762A8A9707004B4EF9 /* ListeningView.swift */; };
 		35CCFF862A82879100645901 /* EllipseProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CCFF852A82879100645901 /* EllipseProgressBar.swift */; };
 		35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD98542A81F46F0038B7A8 /* LatestRead.swift */; };
@@ -48,6 +58,8 @@
 		35FE9B732A7E2F420002DD41 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B722A7E2F420002DD41 /* InputTextField.swift */; };
 		35FE9B752A7E36650002DD41 /* InputPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B742A7E36650002DD41 /* InputPasswordField.swift */; };
 		35FE9B782A7E5E910002DD41 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE9B772A7E5E910002DD41 /* Home.swift */; };
+		5574BC301FB0EA6E87FF6819 /* Pods_AudioBooks_AudioBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496304AA1DEC417284952F1 /* Pods_AudioBooks_AudioBooksUITests.framework */; };
+		59CFC27DFA663505F7CC4B89 /* Pods_AudioBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C387C906EBFA334F2E11E5E /* Pods_AudioBooksTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C387C906EBFA334F2E11E5E /* Pods_AudioBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContinueWith.swift; sourceTree = "<group>"; };
 		350CBE3F2A889BBA003C7CD8 /* Partial_TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partial_TabBar.swift; sourceTree = "<group>"; };
 		351702652A698019001E2F5D /* AudioBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,19 +97,24 @@
 		351702972A699258001E2F5D /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		351702992A699B20001E2F5D /* Splash1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash1.swift; sourceTree = "<group>"; };
 		3517029B2A69A06F001E2F5D /* Splash3.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Splash3.swift; sourceTree = "<group>"; tabWidth = 4; };
+		351EA9F32AAC40CD000327AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		352D2E0E2A873D88007ACE40 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
-		352D2E102A874EA7007ACE40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		352EA9352A6BAEE300D98A2F /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		352EA9372A6BC3C100D98A2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		353040F72AAB727A0045E93E /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		353A5D322A6EB3E300C4F6B0 /* StatusPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPopup.swift; sourceTree = "<group>"; };
 		354211502A8242D0008BD02E /* searchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchBar.swift; sourceTree = "<group>"; };
 		354211542A8244DC008BD02E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		35A941CB2AB43C3A00D0956E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		35AD3BB82A86682500E1E60C /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		35AD3BBA2A86694100E1E60C /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		35AD3BBC2A866CF800E1E60C /* CardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformation.swift; sourceTree = "<group>"; };
 		35AD3BBE2A8678CF00E1E60C /* CardSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSmall.swift; sourceTree = "<group>"; };
 		35AD3BC02A867CFD00E1E60C /* AudioBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		35AD3BC22A8689DD00E1E60C /* BookmarkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCard.swift; sourceTree = "<group>"; };
+		35C35BA12AAC521500145F1B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		35C35BA32AAC572D00145F1B /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		35C35BA52AACC88000145F1B /* InputTextFieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldError.swift; sourceTree = "<group>"; };
 		35CCED762A8A9707004B4EF9 /* ListeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningView.swift; sourceTree = "<group>"; };
 		35CCFF852A82879100645901 /* EllipseProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipseProgressBar.swift; sourceTree = "<group>"; };
 		35CD98542A81F46F0038B7A8 /* LatestRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRead.swift; sourceTree = "<group>"; };
@@ -112,6 +130,14 @@
 		35FE9B722A7E2F420002DD41 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		35FE9B742A7E36650002DD41 /* InputPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordField.swift; sourceTree = "<group>"; };
 		35FE9B772A7E5E910002DD41 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		427FD66A0952367E12288730 /* Pods_AudioBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		538CC841E59FBD42D4FA9B8A /* Pods-AudioBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooksTests.release.xcconfig"; path = "Target Support Files/Pods-AudioBooksTests/Pods-AudioBooksTests.release.xcconfig"; sourceTree = "<group>"; };
+		7F6692A0B63EC3A0125AF29D /* Pods-AudioBooks-AudioBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooks-AudioBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-AudioBooks-AudioBooksUITests/Pods-AudioBooks-AudioBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4B33F8CEED7F94E8CDC4315 /* Pods-AudioBooks-AudioBooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooks-AudioBooksUITests.release.xcconfig"; path = "Target Support Files/Pods-AudioBooks-AudioBooksUITests/Pods-AudioBooks-AudioBooksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A8F0D279AB62BF09596F1A7B /* Pods-AudioBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooks.debug.xcconfig"; path = "Target Support Files/Pods-AudioBooks/Pods-AudioBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		B496304AA1DEC417284952F1 /* Pods_AudioBooks_AudioBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudioBooks_AudioBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F7EFBDC34A0429C230CC09 /* Pods-AudioBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooks.release.xcconfig"; path = "Target Support Files/Pods-AudioBooks/Pods-AudioBooks.release.xcconfig"; sourceTree = "<group>"; };
+		E50967D7E2765DB9A459918E /* Pods-AudioBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudioBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-AudioBooksTests/Pods-AudioBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +145,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351EA9F72AAC435E000327AE /* FirebaseAnalytics in Frameworks */,
+				351EA9F92AAC435E000327AE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				33343BAD0DEF8472A77C61FB /* Pods_AudioBooks.framework in Frameworks */,
+				351EA9FB2AAC435E000327AE /* FirebaseAuth in Frameworks */,
+				351EA9FD2AAC435E000327AE /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CFC27DFA663505F7CC4B89 /* Pods_AudioBooksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5574BC301FB0EA6E87FF6819 /* Pods_AudioBooks_AudioBooksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +179,11 @@
 				351702782A69801C001E2F5D /* AudioBooksTests */,
 				351702822A69801C001E2F5D /* AudioBooksUITests */,
 				351702662A698019001E2F5D /* Products */,
+				E599A60ADB53CD3AAF057DF0 /* Pods */,
+				569B3FDD3EF1F57D599C0C0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		351702662A698019001E2F5D /* Products */ = {
 			isa = PBXGroup;
@@ -162,6 +198,7 @@
 		351702672A698019001E2F5D /* AudioBooks */ = {
 			isa = PBXGroup;
 			children = (
+				351EA9F32AAC40CD000327AE /* GoogleService-Info.plist */,
 				351702922A698247001E2F5D /* Model */,
 				351702932A698257001E2F5D /* View */,
 				351702942A698263001E2F5D /* Controller */,
@@ -219,8 +256,9 @@
 		351702942A698263001E2F5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				35C35BA12AAC521500145F1B /* File.swift */,
 				351702682A698019001E2F5D /* AudioBooksApp.swift */,
-				352D2E102A874EA7007ACE40 /* File.swift */,
+				35C35BA32AAC572D00145F1B /* RegisterUser.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +273,7 @@
 				3517029B2A69A06F001E2F5D /* Splash3.swift */,
 				35EC86452A6ABCEA0029A2AF /* Login.swift */,
 				35EC86472A6AE0E20029A2AF /* Register.swift */,
+				35A941CB2AB43C3A00D0956E /* ForgotPasswordView.swift */,
 			);
 			path = "Login Page";
 			sourceTree = "<group>";
@@ -271,6 +310,8 @@
 				35E468C02A74E2EB00CD54DE /* ButtonBlock.swift */,
 				3504D3FD2A7A65D000C9EF44 /* ButtonContinueWith.swift */,
 				35FE9B722A7E2F420002DD41 /* InputTextField.swift */,
+				353040F72AAB727A0045E93E /* LogoView.swift */,
+				35C35BA52AACC88000145F1B /* InputTextFieldError.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -285,6 +326,29 @@
 			path = "Access Book Page";
 			sourceTree = "<group>";
 		};
+		569B3FDD3EF1F57D599C0C0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				427FD66A0952367E12288730 /* Pods_AudioBooks.framework */,
+				B496304AA1DEC417284952F1 /* Pods_AudioBooks_AudioBooksUITests.framework */,
+				1C387C906EBFA334F2E11E5E /* Pods_AudioBooksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E599A60ADB53CD3AAF057DF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8F0D279AB62BF09596F1A7B /* Pods-AudioBooks.debug.xcconfig */,
+				C0F7EFBDC34A0429C230CC09 /* Pods-AudioBooks.release.xcconfig */,
+				7F6692A0B63EC3A0125AF29D /* Pods-AudioBooks-AudioBooksUITests.debug.xcconfig */,
+				A4B33F8CEED7F94E8CDC4315 /* Pods-AudioBooks-AudioBooksUITests.release.xcconfig */,
+				E50967D7E2765DB9A459918E /* Pods-AudioBooksTests.debug.xcconfig */,
+				538CC841E59FBD42D4FA9B8A /* Pods-AudioBooksTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,15 +356,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 351702892A69801C001E2F5D /* Build configuration list for PBXNativeTarget "AudioBooks" */;
 			buildPhases = (
+				D85608192254D0D41FB103F4 /* [CP] Check Pods Manifest.lock */,
 				351702612A698019001E2F5D /* Sources */,
 				351702622A698019001E2F5D /* Frameworks */,
 				351702632A698019001E2F5D /* Resources */,
+				CFF1B255F1EFA080EE7CD461 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AudioBooks;
+			packageProductDependencies = (
+				351EA9F62AAC435E000327AE /* FirebaseAnalytics */,
+				351EA9F82AAC435E000327AE /* FirebaseAnalyticsWithoutAdIdSupport */,
+				351EA9FA2AAC435E000327AE /* FirebaseAuth */,
+				351EA9FC2AAC435E000327AE /* FirebaseAuthCombine-Community */,
+			);
 			productName = AudioBooks;
 			productReference = 351702652A698019001E2F5D /* AudioBooks.app */;
 			productType = "com.apple.product-type.application";
@@ -309,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3517028C2A69801C001E2F5D /* Build configuration list for PBXNativeTarget "AudioBooksTests" */;
 			buildPhases = (
+				477DB9ADD1AF5D688F13E9AF /* [CP] Check Pods Manifest.lock */,
 				351702712A69801C001E2F5D /* Sources */,
 				351702722A69801C001E2F5D /* Frameworks */,
 				351702732A69801C001E2F5D /* Resources */,
@@ -327,9 +400,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3517028F2A69801C001E2F5D /* Build configuration list for PBXNativeTarget "AudioBooksUITests" */;
 			buildPhases = (
+				190C8B3C8D99D6D50EFDA137 /* [CP] Check Pods Manifest.lock */,
 				3517027B2A69801C001E2F5D /* Sources */,
 				3517027C2A69801C001E2F5D /* Frameworks */,
 				3517027D2A69801C001E2F5D /* Resources */,
+				7887A8C24B6205F14C353B16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,8 +423,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = 09;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = fam;
 				TargetAttributes = {
 					351702642A698019001E2F5D = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -373,6 +450,9 @@
 				Base,
 			);
 			mainGroup = 3517025C2A698019001E2F5D;
+			packageReferences = (
+				351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 351702662A698019001E2F5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,6 +471,7 @@
 			files = (
 				351702702A69801C001E2F5D /* Preview Assets.xcassets in Resources */,
 				3517026D2A69801C001E2F5D /* Assets.xcassets in Resources */,
+				351EA9F42AAC40CD000327AE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +491,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		190C8B3C8D99D6D50EFDA137 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioBooks-AudioBooksUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		477DB9ADD1AF5D688F13E9AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioBooksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7887A8C24B6205F14C353B16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioBooks-AudioBooksUITests/Pods-AudioBooks-AudioBooksUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioBooks-AudioBooksUITests/Pods-AudioBooks-AudioBooksUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioBooks-AudioBooksUITests/Pods-AudioBooks-AudioBooksUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFF1B255F1EFA080EE7CD461 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioBooks/Pods-AudioBooks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AudioBooks/Pods-AudioBooks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AudioBooks/Pods-AudioBooks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D85608192254D0D41FB103F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AudioBooks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		351702612A698019001E2F5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -426,15 +610,18 @@
 				35AD3BBF2A8678CF00E1E60C /* CardSmall.swift in Sources */,
 				354211552A8244DC008BD02E /* HomeView.swift in Sources */,
 				35EC86462A6ABCEA0029A2AF /* Login.swift in Sources */,
+				35C35BA22AAC521500145F1B /* File.swift in Sources */,
 				35CD985D2A8217680038B7A8 /* item.swift in Sources */,
 				35AD3BBD2A866CF800E1E60C /* CardInformation.swift in Sources */,
 				354211512A8242D0008BD02E /* searchBar.swift in Sources */,
-				352D2E112A874EA7007ACE40 /* File.swift in Sources */,
 				35E468C12A74E2EB00CD54DE /* ButtonBlock.swift in Sources */,
 				35CD98552A81F46F0038B7A8 /* LatestRead.swift in Sources */,
 				35CD985B2A82141F0038B7A8 /* titleContainer.swift in Sources */,
+				35A941CC2AB43C3A00D0956E /* ForgotPasswordView.swift in Sources */,
 				35FE9B782A7E5E910002DD41 /* Home.swift in Sources */,
 				35E468BB2A74D8F100CD54DE /* testComponent.swift in Sources */,
+				35C35BA42AAC572D00145F1B /* RegisterUser.swift in Sources */,
+				35C35BA62AACC88000145F1B /* InputTextFieldError.swift in Sources */,
 				3517029C2A69A06F001E2F5D /* Splash3.swift in Sources */,
 				351702962A698311001E2F5D /* Splash4.swift in Sources */,
 				35E468BF2A74DEDE00CD54DE /* ButtonBorder.swift in Sources */,
@@ -448,6 +635,7 @@
 				352EA9382A6BC3C200D98A2F /* User.swift in Sources */,
 				35AD3BC12A867CFD00E1E60C /* AudioBook.swift in Sources */,
 				353A5D332A6EB3E300C4F6B0 /* StatusPopup.swift in Sources */,
+				353040F82AAB727A0045E93E /* LogoView.swift in Sources */,
 				35AD3BC32A8689DE00E1E60C /* BookmarkCard.swift in Sources */,
 				352D2E0F2A873D88007ACE40 /* BookmarkView.swift in Sources */,
 				351702692A698019001E2F5D /* AudioBooksApp.swift in Sources */,
@@ -603,6 +791,7 @@
 		};
 		3517028A2A69801C001E2F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8F0D279AB62BF09596F1A7B /* Pods-AudioBooks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,11 +801,11 @@
 				DEVELOPMENT_TEAM = PU53DYK86L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Digibook;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,20 +821,22 @@
 		};
 		3517028B2A69801C001E2F5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F7EFBDC34A0429C230CC09 /* Pods-AudioBooks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioBooks/Preview Content\"";
 				DEVELOPMENT_TEAM = PU53DYK86L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Digibook;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,6 +844,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com..AudioBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -661,6 +853,7 @@
 		};
 		3517028D2A69801C001E2F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50967D7E2765DB9A459918E /* Pods-AudioBooksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -681,6 +874,7 @@
 		};
 		3517028E2A69801C001E2F5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538CC841E59FBD42D4FA9B8A /* Pods-AudioBooksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -701,6 +895,7 @@
 		};
 		351702902A69801C001E2F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6692A0B63EC3A0125AF29D /* Pods-AudioBooks-AudioBooksUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -719,6 +914,7 @@
 		};
 		351702912A69801C001E2F5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B33F8CEED7F94E8CDC4315 /* Pods-AudioBooks-AudioBooksUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -775,6 +971,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		351EA9F62AAC435E000327AE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		351EA9F82AAC435E000327AE /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		351EA9FA2AAC435E000327AE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		351EA9FC2AAC435E000327AE /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351EA9F52AAC435E000327AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		352EA9342A6BAEE300D98A2F /* UserData.xcdatamodeld */ = {

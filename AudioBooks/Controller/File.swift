@@ -17,3 +17,26 @@ func getTitle(tag: Int) -> String? {
         return nil
     }
 }
+
+//func showPopUp(isTrues: Bool?) {
+//    var isTrue: Bool?
+//    
+//    if isTrue == true {
+//        StatusPopup(img: "checkmark.circle", txt: "Registrasi Berhasil", clr: .green)
+//            .transition(.scale)
+//            .onAppear {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                    isTrue = nil
+//                    destination = .success
+//                }
+//            }
+//    } else if isTrue == false {
+//        StatusPopup(img: "exclamationmark.circle", txt: "Registrasi Gagal", clr: .red)
+//            .transition(.scale)
+//            .onAppear {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                    isTrue = nil
+//                }
+//            }
+//    }
+//}
